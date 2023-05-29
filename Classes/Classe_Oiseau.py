@@ -1,7 +1,7 @@
 # George Pene
 
 # Importer la classe Animal
-from Classe_Animal import *
+from Classes.Classe_Animal import *
 
 
 class Oiseau(Animal):

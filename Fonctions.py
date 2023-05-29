@@ -7,6 +7,6 @@ def Existe_ou_pas(p_Numero_enclos) -> bool:
     :return: Retourne un booléen vrai si présent, false si absent de la liste.
     """
     for elt in Enclos.ls_enclos:
-        if elt.Num == p_Numero_enclos:
+        if elt.Numero_enclos == p_Numero_enclos:
             return True
     return False

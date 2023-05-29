@@ -1,10 +1,10 @@
 # George Pene
 
 # Importer la classe Enclos
-from Classe_Enclos import *
+from Classes.Classe_Enclos import *
 
 # Importer la classe Veterinaire
-from Classe_Veterinaire import *
+from Classes.Classe_Veterinaire import *
 
 # importer json
 import jsonpickle

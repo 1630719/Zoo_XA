@@ -51,13 +51,13 @@ class Fenetreenclos(QtWidgets.QDialog, UI_PY.Dialog_enclos.Ui_Dialog):
 
         # Si le numero d'enclos est invalide
         if enclos1.Numero_enclos == "":
-            self.label_erreur_validation_numero_enclos.setVisible(True)
+            self.label_erreur_numero_enclos_existe.setVisible(True)
             self.lineEdit_numero_enclos.clear()
 
         # Si numero d'enclos existe:
         existe = Fonctions.Existe_ou_pas(enclos1.Numero_enclos)
 
-        if existe :
+        if existe:
             self.lineEdit_numero_enclos.clear()
             self.label_erreur_numero_enclos_existe.setVisible(True)
 
@@ -67,7 +67,7 @@ class Fenetreenclos(QtWidgets.QDialog, UI_PY.Dialog_enclos.Ui_Dialog):
             self.lineEdit_nom_enclos.clear()
 
         # Si tout est valide
-        if enclos1.Numero_enclos != "" and enclos1.Numero_enclos != "":
+        if enclos1.Numero_enclos != "" and enclos1.Numero_enclos != "" and not existe:
 
             # On enlève les labels d'erreur
             self.label_erreur_numero_enclos_existe.setVisible(False)
