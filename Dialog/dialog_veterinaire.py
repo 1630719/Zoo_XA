@@ -28,4 +28,4 @@ class Fenetreveterinaire(QtWidgets.QDialog, UI_PY.Dialog_veterinaire.Ui_Dialog):
 
     @QtCore.pyqtSlot()
     def on_pushButton_ajouter_enclos_liste_clicked(self):
-        dialog =
+        pass
