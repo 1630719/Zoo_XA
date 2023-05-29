@@ -30,9 +30,11 @@ from Dialog.dialog_recherche import Fenetrerecherche
 from Dialog.dialog_veterinaire import Fenetreveterinaire
 
 
+
 #######################################
 ###### DÉFINITIONS DES FONCTIONS ######
 #######################################
+
 
 ########################################################
 ###### DÉFINITIONS DE LA CLASSE fenetrePrincipale ######
@@ -66,7 +68,7 @@ class fenetrePrincipale(QtWidgets.QMainWindow, UI_PY.MainWindow_zoo.Ui_MainWindo
         # Afficher la boite de dialogue
         dialog.show()
         dialog.exec_()
-
+a
     # gastionnaire d'événement du bouton Médicament
     @pyqtSlot()
     def on_pushButton_animal_clicked(self):

@@ -1,10 +1,12 @@
 # Pour le gestionnaire d'événement
 from PyQt5.QtCore import pyqtSlot
 # Importer la boite de dialogue
+import Fonctions
 import UI_PY.Dialog_enclos
 from PyQt5 import QtWidgets
 from PyQt5 import QtCore
 from Classes.Classe_Enclos import *
+
 
 # Xavier Ayotte
 # 1630719
@@ -51,6 +53,13 @@ class Fenetreenclos(QtWidgets.QDialog, UI_PY.Dialog_enclos.Ui_Dialog):
         if enclos1.Numero_enclos == "":
             self.label_erreur_validation_numero_enclos.setVisible(True)
             self.lineEdit_numero_enclos.clear()
+
+        # Si numero d'enclos existe:
+        existe = Fonctions.Existe_ou_pas(enclos1.Numero_enclos)
+
+        if existe :
+            self.lineEdit_numero_enclos.clear()
+            self.label_erreur_numero_enclos_existe.setVisible(True)
 
         # Si le nom est invalide
         if enclos1.Nom_enclos == "":
@@ -111,5 +120,3 @@ class Fenetreenclos(QtWidgets.QDialog, UI_PY.Dialog_enclos.Ui_Dialog):
             else:
                 self.label_erreur_numero_enclos_existe_pas.setVisible(True)
                 self.lineEdit_numero_enclos.clear()
-
-

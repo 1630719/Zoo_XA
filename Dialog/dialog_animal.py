@@ -19,6 +19,7 @@ class Fenetreanimal(QtWidgets.QDialog, UI_PY.Dialog_animal.Ui_Dialog):
         self.setupUi(self)
         self.setWindowTitle("Boîte de dialogue animal")
 
+        # On parcous la liste d'enclos pour ajouter les numéros d'enclos ajoutés au préalable dans la ComboBox
         for elt in Enclos.ls_enclos:
             self.comboBox_enclos_animal.addItem(elt.Numero_enclos)
 
