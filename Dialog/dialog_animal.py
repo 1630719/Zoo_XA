@@ -1,8 +1,10 @@
 # Pour le gestionnaire d'événement
 from PyQt5.QtCore import pyqtSlot
 # Importer la boite de dialogue
+from Classes.Classe_Enclos import *
 import UI_PY.Dialog_animal
 from PyQt5 import QtWidgets
+
 
 ######################################################
 ###### DÉFINITIONS DE LA CLASSE Fenetrelistview ######
@@ -16,4 +18,10 @@ class Fenetreanimal(QtWidgets.QDialog, UI_PY.Dialog_animal.Ui_Dialog):
         super(Fenetreanimal, self).__init__(parent)
         self.setupUi(self)
         self.setWindowTitle("Boîte de dialogue animal")
+
+        for elt in Enclos.ls_enclos:
+            self.comboBox_enclos_animal.addItem(elt.Numero_enclos)
+
+
+
 
