@@ -3,6 +3,7 @@ from PyQt5.QtCore import pyqtSlot
 # Importer la boite de dialogue
 import UI_PY.Dialog_veterinaire
 from PyQt5 import QtWidgets
+from PyQt5 import QtCore
 
 from Classes.Classe_Enclos import *
 # Xavier Ayotte
@@ -25,3 +26,6 @@ class Fenetreveterinaire(QtWidgets.QDialog, UI_PY.Dialog_veterinaire.Ui_Dialog):
         for elt in Enclos.ls_enclos:
             self.comboBox_enclos_animal.addItem(elt.Numero_enclos)
 
+    @QtCore.pyqtSlot()
+    def on_pushButton_ajouter_enclos_liste_clicked(self):
+        dialog =
