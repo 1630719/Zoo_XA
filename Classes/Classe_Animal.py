@@ -38,8 +38,7 @@ class Animal:
         self.Enclos = p_enclos  # attribut public
         self.ls_veterinaire = p_ls_veterinaire  # attribut public
 
-        Animal.nb_animaux += 1  # Calcul le nbr d'animaux instanciés
-        Animal.ls_animaux.append(self)  # Contient tous les objets de type Animal instanciés
+
 
     # Propriété Numero_animal
     @property
